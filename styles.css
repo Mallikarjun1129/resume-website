@@ -1,0 +1,169 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #e0e0e0;                     /* Light gray/white text */
+    background-image: url('https://thumbs.dreamstime.com/b/glowing-blue-lines-dots-abstract-digital-network-illustration-dark-background-futuristic-futuristic-blue-abstract-technology-410632239.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #0a0e17;          /* Fallback dark color if image fails */
+}
+
+/* Removed white overlay → fully dark background now visible */
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(20, 25, 40, 0.85);  /* Dark semi-transparent so background shows through */
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.section {
+    padding: 40px 0;
+    border-bottom: 1px solid #333;
+}
+
+h1, h2, h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 1.8em;
+    border-bottom: 3px solid #4da6ff;     /* Bright blue accent */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+p, li {
+    margin-bottom: 10px;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to bottom, #0f1e4a, #1a3566);
+    color: white;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.contact-info, .title {
+    color: #d0e0ff;
+}
+
+nav a {
+    color: #a0c0ff;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Job, Project, Edu Entries */
+.job, .project, .edu {
+    margin-bottom: 30px;
+}
+
+.date {
+    font-style: italic;
+    color: #a0a0a0;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+.skills-list {
+    list-style-type: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #0d1425;
+    color: #a0a0a0;
+    font-size: 0.9em;
+}
+
+/* Edit Mode */
+.controls {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 1000;
+    background: rgba(30, 50, 90, 0.9);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+button {
+    background: #4da6ff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin: 0 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #6bb8ff;
+}
+
+#status {
+    margin-left: 10px;
+    font-style: italic;
+    color: #d0e0ff;
+}
+
+.edit-mode .editable,
+.edit-mode [contenteditable="true"] {
+    background: rgba(40, 60, 100, 0.7);
+    border: 2px dashed #4da6ff;
+    padding: 6px;
+    min-height: 24px;
+    outline: none;
+    color: #ffffff;
+}
+
+.editable:focus,
+[contenteditable="true"]:focus {
+    background: rgba(60, 90, 140, 0.6);
+    border-color: #80c4ff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header { padding: 40px 0; }
+    .container { padding: 15px; }
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+}
